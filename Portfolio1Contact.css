@@ -1,0 +1,195 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+html{
+    scroll-behavior: smooth;
+    /* overflow: hidden;
+    height: 100vh; */
+}
+
+/*====================== NAVBAR =====================*/
+
+body{
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+nav{
+    padding: 10px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.678);
+    border-bottom: 1px solid rgba(218, 0, 0, 0.386);
+    z-index: 999999;
+    width: 100%;
+    height: 60px;
+    visibility: hidden;
+    opacity: 0;
+    animation: show-content 1.5s forwards ;
+    animation-delay: 1s;
+}
+
+@keyframes show-content{
+    100%{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+body nav{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    gap: 130vh;
+
+    
+}
+
+
+
+body nav .left a{
+    text-decoration: none;
+    font-family: "Italianno", cursive;
+    font-weight: 400;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+body nav .left a:hover{
+    color: red;
+    text-shadow: 0 0 25px red;
+}
+
+
+body nav .right ul{
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+}
+
+body nav .right ul li{
+    display: flex;
+    list-style: none;
+}
+
+body nav .right ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: "Italianno", cursive;
+    font-weight: 400;
+    font-size: 40px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+body nav .right ul li a:hover,
+body nav .right ul li a.active{
+    color: red;
+    text-shadow: 0 0 25px red;
+}
+
+/* ======================= BAR ANIMATION ===================== */
+
+.bar-animation{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: -1;
+}
+
+.bar-animation .bar{
+    width: 100%;
+    height: 100%; 
+    background: linear-gradient(black,rgb(49, 14, 14),rgb(47, 0, 0));
+    transform: translateY(-100%);
+    animation: show-bars .5s ease-in-out forwards;
+    animation-delay: calc(.1s * var(--i));
+}
+
+@keyframes show-bars{
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+/* ================= PAGE 1 =====================*/
+
+#page1{
+    height: 100vh;
+    color: white;
+}    
+
+#page1 h3{
+    padding-top: 100px;
+    text-align: center;
+    font-size: 50px;
+    font-family: "Italianno", cursive;
+    font-weight: lighter;
+    border-bottom: 1px solid rgba(255, 0, 0, 0.258);
+}
+
+.page1{
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    animation: show-content 1.5s forwards ;
+    animation-delay:.9s;
+}
+
+.page1 p{
+    margin-top: 50px;
+    width: 1950px;
+    font-family: "Eagle Lake", serif;
+    font-weight: lighter;
+    font-size: 30px;
+}
+
+.page1 p.cont{
+    text-align: center;
+}
+
+.page1 .contact2{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.page1 .contact2 a i{
+    color: rgb(222, 90, 90);
+    transition: 0.2s ease;
+    font-size: 45px;
+    transition: 0.2s ease;
+}
+
+.page1 .contact2 a i:hover{
+    color: red;
+    text-shadow: 0 0 25px red;
+}
+
+.page1 p.or{
+    text-align: center;
+}
+
+.page1 a.git i{
+    margin-top: 30px;
+    color: rgb(222, 90, 90);
+    transition: 0.2s ease;
+    font-size: 45px;
+    transition: 0.2s ease;
+}
+ .page1 a.git i:hover{
+    color: red;
+    text-shadow: 0 0 25px red;
+}

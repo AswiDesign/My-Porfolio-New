@@ -1,0 +1,467 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+html{
+    scroll-behavior: smooth;
+    height: 100%;
+    width: 100%;
+}
+
+/* ==================== NAVBAR ========================== */
+
+nav{
+    padding: 10px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.678);
+    border-bottom: 1px solid rgba(218, 0, 0, 0.386);
+    z-index: 999999;
+    width: 100%;
+    height: 60px;
+    visibility: hidden;
+    opacity: 0;
+    animation: show-content 1.5s forwards ;
+    animation-delay: 1s;
+}
+
+@keyframes show-content{
+    100%{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+body nav{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    gap: 130vh;
+
+    
+}
+
+
+
+body nav .left a{
+    text-decoration: none;
+    font-family: "Italianno", cursive;
+    font-weight: 400;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+body nav .left a:hover{
+    color: red;
+    text-shadow: 0 0 25px red;
+}
+
+
+body nav .right ul{
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+}
+
+body nav .right ul li{
+    display: flex;
+    list-style: none;
+}
+
+body nav .right ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: "Italianno", cursive;
+    font-weight: 400;
+    font-size: 40px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+body nav .right ul li a:hover,
+body nav .right ul li a.active{
+    color: red;
+    text-shadow: 0 0 25px red;
+}
+
+/* ======================= BAR ANIMATION ===================== */
+
+.bar-animation{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: -1;
+}
+
+.bar-animation .bar{
+    width: 100%;
+    height: 100%; 
+    background: linear-gradient(black,rgb(49, 14, 14),rgb(47, 0, 0));
+    transform: translateY(-100%);
+    animation: show-bars .5s ease-in-out forwards;
+    animation-delay: calc(.1s * var(--i));
+}
+
+@keyframes show-bars{
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+/* ======================== PAGE 1 ========================== */
+
+#page1{
+    color: white;
+}
+
+#page1 a.amore{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    cursor: pointer none;
+    background-color: red;
+    width: 70px;
+    border-radius: 50%;
+}
+
+
+#page1 i#down{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+    margin-left: 190vh;
+    font-size: 50px;
+    width: 66px;
+    transition: .3s ease;
+    visibility: hidden;
+    color: rgb(255, 255, 255);
+    opacity: 0;
+    animation: show-down 1s forwards;
+    animation-delay: 1.6s;
+
+}
+
+@keyframes show-down{
+    100%{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+#page1 i#down:hover{
+    color: red;
+    transform: scale(1.1);
+}
+
+.page1{
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+    opacity: 0;
+    animation: show-content 1.5s forwards ;
+    animation-delay: 1.5s;
+}
+
+#page1 h3.head{
+    padding-top: 100px;
+    text-align: center;
+    font-size: 50px;
+    font-family: "Italianno", cursive;
+    font-weight: lighter;
+    border-bottom: 1px solid rgba(255, 0, 0, 0.258);
+}
+
+.page1 .education{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page1 .education h3.edu{
+    margin-top: 130px;
+    font-size: 80px;
+    font-family: "Italianno", cursive;
+    font-weight: lighter;
+}
+
+.page1 .education p.edu1{
+    font-family: "Eagle Lake", serif;
+    font-weight: lighter;
+    font-size: 30px;
+}
+.page1 .education p.clg{
+    font-family: "Eagle Lake", serif;
+    font-weight: lighter;
+    font-size: 30px;
+}
+
+.page1 .skills{
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 250px;
+    margin-top: 50px;
+}
+
+.page1 .skills .technicalskill{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page1 .skills .technicalskill h3.skill1{
+    margin-top: 40px;
+    font-size: 80px;
+    font-family: "Italianno", cursive;
+    font-weight: lighter;
+}
+
+.page1 .skills .technicalskill p.skill1{
+    font-family: "Eagle Lake", serif;
+    font-weight: lighter;
+    font-size: 30px;
+}
+
+.page1 .skills .skill{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page1 .skills h3.skill2{
+    margin-top: 40px;
+    font-size: 80px;
+    font-family: "Italianno", cursive;
+    font-weight: lighter;
+}
+
+.page1 .skills .skill p.skill2{
+    font-family: "Eagle Lake", serif;
+    font-weight: lighter;
+    font-size: 30px;
+}
+
+/* =========================== PAGE2 ========================= */
+
+#page2{
+    background: linear-gradient(rgb(47, 0, 0),rgb(49, 14, 14),black);
+    height: 100vh;
+    margin-top: 16vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page2 .projects{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page2 .projects h3.project{
+    margin-top: 157px;
+    font-size: 80px;
+    font-family: "Italianno", cursive;
+    font-weight:lighter;
+}
+
+.page2 .projects h4.prohead{
+    margin-top: 30px;
+    font-size: 30px;
+    font-family: "Eagle Lake", serif;
+    font-weight: lighter;
+}
+.page2 .projects h4.prohead1{
+    margin-top: 48px;
+    font-size: 30px;
+    font-family: "Eagle Lake", serif;
+    font-weight: lighter;
+}
+
+.page2 .projects p.para{
+    width: 1700px;
+    margin-top: 10px;
+    font-size: 25px;
+    font-family: "Eagle Lake", serif;
+    font-weight: lighter;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .page1 .grid{
+    display: flex;
+    gap: 40px;
+    padding: 15px;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+.page1 .grid .a, .b, .c{
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 200px;
+
+}
+
+.page1 .grid .a h4, .b h4 , .c h4{
+    font-family: "Italianno", cursive;
+    font-weight: lighter;
+    font-size: 60px;
+    margin-left: 10px;
+}
+
+.page1 .grid .a p, .b p, .c p{
+    letter-spacing: 2px;
+    font-family: "Eagle Lake", serif;
+    font-weight: lighter;
+    font-size: 20px;
+}
+
+.page1 .edu{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page1 .edu h4{
+    margin-top: 0%;
+    font-family: "Italianno", cursive;
+    font-weight: lighter;
+    font-size: 70px;
+    margin-left: 10px;
+}
+
+.page1 .edu p{
+    letter-spacing: 2px;
+    font-family: "Eagle Lake", serif;
+    font-weight: lighter;
+    font-size: 30px;
+}
+
+.page1 .intern{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.page1 .intern h4{
+    font-family: "Italianno", cursive;
+    font-weight: lighter;
+    font-size: 70px;
+    margin-left: 10px;
+}
+
+.page1 .intern p{
+    letter-spacing: 2px;
+    font-family: "Eagle Lake", serif;
+    font-weight: lighter;
+    font-size: 30px;
+}
+
+============== PAGE 3 ======================
+
+#page2{
+    background: linear-gradient(rgb(114, 0, 0),black);
+    height: 100vh;
+}    
+
+#page2 h3{
+    padding-top: 100px;
+    text-align: center;
+    font-size: 50px;
+    font-family: "Italianno", cursive;
+    font-weight: lighter;
+    border-bottom: 1px solid rgba(255, 0, 0, 0.258);
+}
+
+.page2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page2 p{
+    margin-top: 50px;
+    width: 1950px;
+    font-family: "Eagle Lake", serif;
+    font-weight: lighter;
+    font-size: 30px;
+}
+
+.page2 p.cont{
+    text-align: center;
+}
+
+.page2 .contact2{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    
+}
+
+.page2 .contact2 a i{
+    color: rgb(222, 90, 90);
+    transition: 0.2s ease;
+    font-size: 45px;
+    transition: 0.2s ease;
+}
+
+.page2 .contact2 a i:hover{
+    color: red;
+    text-shadow: 0 0 25px red;
+}
+
+.page2 p.or{
+    text-align: center;
+}
+
+.page2 a.git i{
+    margin-top: 30px;
+    color: rgb(222, 90, 90);
+    transition: 0.2s ease;
+    font-size: 45px;
+    transition: 0.2s ease;
+}
+ .page2 a.git i:hover{
+    color: red;
+    text-shadow: 0 0 25px red;
+} */
